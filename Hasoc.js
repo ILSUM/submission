@@ -90,12 +90,14 @@ async function submission() {
                                     throw new Error(response.status)
                                 }
                                 if (response.status == 200) {
+                                    console.log('im in 200')
                                     Swal.fire({
                                         title: 'Run Submitted Successfully! 🥳🎉🥳',
                                         icon: 'success',
                                         timer: 2000,
                                         showConfirmButton: true
                                     })
+                                    console.log('200 swal done')
                                     team_data_new();
                                 }
                                 return response.json()
@@ -264,8 +266,8 @@ async function details(_id) {
 
 async function team_data_new() {
     var x = document.getElementById("loading");
-    //console.log(window.getComputedStyle(x).display === "none")
-    //console.log(window.getComputedStyle(x).visibility === "hidden")
+    console.log(window.getComputedStyle(x).display === "none")
+    console.log(window.getComputedStyle(x).visibility === "hidden")
     if (window.getComputedStyle(x).display === "none") {
         document.getElementById("body_content").setAttribute("hidden", true);
         document.getElementById("loading").removeAttribute("hidden", false);
