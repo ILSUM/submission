@@ -1,5 +1,5 @@
-proxy = `http://127.0.0.1:5000/`
-    //proxy = `https://hasocsubmission.el.r.appspot.com`
+//proxy = `http://127.0.0.1:5000/`
+proxy = `https://ilsumsubmission-359615.el.r.appspot.com`
 
 function logout() {
     document.cookie = "token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
