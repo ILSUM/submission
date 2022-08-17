@@ -101,7 +101,6 @@ async function submission() {
                                 return response.json()
                             })
                             .catch(error => {
-                                console.log(error)
                                 if (error == 'Error: 408') {
                                     console.log('im here')
                                     Swal.fire({
@@ -264,12 +263,19 @@ async function details(_id) {
 }
 
 async function team_data_new() {
-    var sort_param = "task_name";
-    sort_param = document.getElementById("sort_param").value;
+    var x = document.getElementById("loading");
+    //console.log(window.getComputedStyle(x).display === "none")
+    //console.log(window.getComputedStyle(x).visibility === "hidden")
+    if (window.getComputedStyle(x).display === "none") {
+        document.getElementById("body_content").setAttribute("hidden", true);
+        document.getElementById("loading").removeAttribute("hidden", false);
+    }
+    //var sort_param = "task_name";
+    //sort_param = document.getElementById("sort_param").value;
     document.getElementById("navbarDropdownMenuLink").innerHTML = `Welcome ${getCookie('team_display')} 🤗`
     $.ajax({
         type: 'POST',
-        url: proxy + `/dashboard/team_data/${sort_param}`,
+        url: proxy + `/dashboard/team_data/timestamp_desc`,
         headers: {
             "x-access-token": getCookie('token'),
             'content-type': 'application/json'
