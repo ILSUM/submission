@@ -81,6 +81,11 @@ function check_token() {
 
 
 function leaderboard_table() {
+    var x = document.getElementById("loading");
+    if (window.getComputedStyle(x).display === "none") {
+        document.getElementById("body_content").setAttribute("hidden", true);
+        document.getElementById("loading").removeAttribute("hidden", false);
+    }
     document.getElementById("zero_submission_div").setAttribute("hidden", true)
     const urlParams = new URLSearchParams(window.location.search);
     task_name = urlParams.get('subtask_name')

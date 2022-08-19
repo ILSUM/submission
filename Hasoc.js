@@ -204,6 +204,9 @@ async function changepassword() {
 
 
 async function details(_id) {
+    document.getElementById("details_modal_body").innerHTML = `<div id="loading_details" class="container-fluid text-center">
+    <img src="images/loading_coffee.gif" width="450" height="450" />
+</div>`
     $.ajax({
         type: 'POST',
         url: proxy + `/dashboard/submission_details`,
@@ -266,8 +269,6 @@ async function details(_id) {
 
 async function team_data_new() {
     var x = document.getElementById("loading");
-    console.log(window.getComputedStyle(x).display === "none")
-    console.log(window.getComputedStyle(x).visibility === "hidden")
     if (window.getComputedStyle(x).display === "none") {
         document.getElementById("body_content").setAttribute("hidden", true);
         document.getElementById("loading").removeAttribute("hidden", false);
