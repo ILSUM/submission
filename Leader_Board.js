@@ -93,12 +93,13 @@ function leaderboard_table() {
         var task_name = document.getElementById("leaderboard_task").value
     } else {
         var selectionIndex = {
-            "English": 0,
-            "Hindi": 1,
-            "Gujarati": 2
+            "English": 2,
+            "Hindi": 0,
+            "Gujarati": 1
         }
         document.getElementById("leaderboard_task").selectedIndex = selectionIndex[task_name]
     }
+    var sort_order = document.getElementById("sort_order_select").value
     window.history.pushState({}, document.title, "" + "leaderboard.html");
     var leaderboard_table = document.getElementById('leaderboard_table_body')
     var tab = ``
@@ -113,7 +114,8 @@ function leaderboard_table() {
             'content-type': 'application/json'
         },
         data: JSON.stringify({
-            "task_name": task_name
+            "task_name": task_name,
+            "sorting_order": sort_order
         }),
         success: function(result) {
             /*if (result.length <= 2) {

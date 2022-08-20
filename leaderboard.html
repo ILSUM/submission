@@ -192,15 +192,24 @@
     </nav>
     <div id="navbarText">
         <ul class="navbar-nav mr-auto">
-            <li class="row ml-1">
+            <li class="row ml-1 m-3">
                 <table>
                     <tr>
-                        <td>
+                        <td class="pr-2">Task Name:</td>
+                        <td class="pr-5">
                             <select class="form-control" id="leaderboard_task" onchange="leaderboard_table()">
-                          <option selected value="English">English</option>
-                          <option value="Hindi">Hindi</option>
+                          <option value="Hindi" selected>Hindi</option>
                           <option value="Gujarati">Gujarati</option>
-                          </select>
+                          <option value="English">English</option> 
+                        </select>
+                        </td>
+                        <td class="pr-2">Sort By:</td>
+                        <td>
+                            <select class="form-control" id="sort_order_select" onchange="leaderboard_table()">
+                          <option value="rouge_1_f" selected>Rouge-1</option>
+                          <option value="rouge_2_f">Rouge-2</option>
+                          <option value="rouge_3_f">Rouge-3</option> 
+                        </select>
                         </td>
                     </tr>
                 </table>
