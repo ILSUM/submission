@@ -248,11 +248,6 @@ async function details(_id) {
                     <td>${result.scores["rouge-2"].p.toFixed(4)}</td>
                     <td>${result.scores["rouge-2"].r.toFixed(4)}</td>
                     </tr>
-                    <td>Rouge-3</td>
-                    <td>${result.scores["rouge-3"].f.toFixed(4)}</td>
-                    <td>${result.scores["rouge-3"].p.toFixed(4)}</td>
-                    <td>${result.scores["rouge-3"].r.toFixed(4)}</td>
-                    </tr>
                     <tr>
                     <td>Rouge-4</td>
                     <td>${result.scores["rouge-4"].f.toFixed(4)}</td>
@@ -311,7 +306,6 @@ async function team_data_new() {
                     <td class="text-center align-middle">${task_titles[result[i].task_name]}</td>
                     <td class="text-center align-middle">${result[i].scores["rouge-1"].f.toFixed(4)}</td>
                     <td class="text-center align-middle">${result[i].scores["rouge-2"].f.toFixed(4)}</td>
-                    <td class="text-center align-middle">${result[i].scores["rouge-3"].f.toFixed(4)}</td>
                     <td class="text-center align-middle">${result[i].scores["rouge-4"].f.toFixed(4)}</td>
                     <td class="text-center align-middle"><button class="btn btn-outline-info" id="${result[i]._id}" onclick="details(this.id)" name="details" data-toggle="modal" data-target="#myModal3">Details</button></td>
                     <td class="text-center align-middle"> <button class="btn btn-outline-info" onclick="details(this.id); location.href='leaderboard.html?subtask_name=${result[i].task_name}'"><i class="fas fa-walking"></i></a> </button></td>

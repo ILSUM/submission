@@ -140,7 +140,6 @@ function leaderboard_table() {
                     <td class="text-center align-middle">${result[i].timestamp}</td>
                     <td class="text-center align-middle">${result[i].rouge_1_f.toFixed(4)}</td>
                     <td class="text-center align-middle">${result[i].rouge_2_f.toFixed(4)}</td>
-                    <td class="text-center align-middle">${result[i].rouge_3_f.toFixed(4)}</td>
                     <td class="text-center align-middle">${result[i].rouge_4_f.toFixed(4)}</td>
                     </tr>`
                 } else {
@@ -150,7 +149,6 @@ function leaderboard_table() {
                         <td class="text-center align-middle">${result[i].timestamp}</td>
                         <td class="text-center align-middle">${result[i].rouge_1_f.toFixed(4)}</td>
                         <td class="text-center align-middle">${result[i].rouge_2_f.toFixed(4)}</td>
-                        <td class="text-center align-middle">${result[i].rouge_3_f.toFixed(4)}</td>
                         <td class="text-center align-middle">${result[i].rouge_4_f.toFixed(4)}</td>
                         </tr>`
                 }
