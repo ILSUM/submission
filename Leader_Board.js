@@ -136,7 +136,6 @@ function leaderboard_table() {
                     tab += `<tr class="bg-info h5 text-white">
                     <td class="text-center align-middle"><h4>${i+1}</h4></td>
                     <td class="text-center align-middle">${result[i].team}</td>
-                    
                     <td class="text-center align-middle">${result[i].timestamp}</td>
                     <td class="text-center align-middle">${result[i].rouge_1_f.toFixed(4)}</td>
                     <td class="text-center align-middle">${result[i].rouge_2_f.toFixed(4)}</td>
