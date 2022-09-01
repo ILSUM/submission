@@ -1,5 +1,5 @@
 //proxy = `http://127.0.0.1:5000/`
-proxy = `https://ilsumsubmission-359615.el.r.appspot.com`
+proxy = `https://ilsumsub.el.r.appspot.com`
 
 function validate() {
     var email = document.getElementById("username");

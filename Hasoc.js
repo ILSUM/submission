@@ -1,6 +1,5 @@
 //proxy = `http://127.0.0.1:5000/`
-proxy = `https://ilsumsubmission-359615.el.r.appspot.com`
-
+proxy = `https://ilsumsub.el.r.appspot.com`
 
 var task_titles = {
     "English": "English",
