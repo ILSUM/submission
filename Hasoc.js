@@ -128,6 +128,10 @@ async function submission() {
                                     Swal.showValidationMessage(
                                         `Can't Use Same Submission Name For Multiple Submissions`
                                     )
+                                } else {
+                                    Swal.showValidationMessage(
+                                        `Server Busy, please try again later`
+                                    )
                                 }
                             })
                     }

@@ -296,19 +296,22 @@
                 <div class="modal-body">
                     <div class="p-3">
                         <ul>
-                            <li class="text-danger">For every subtask, a maximum of 5 submissions is allowed.</li>
-                            <li>The submission should be in CSV format.</li>
-                            <li>The submission file should contain 2 columns.
+                            <li>For every subtask, maximum 10 submissions per day are allowed.</li>
+                            <li><b>While we will use a max length of 75 words for evaluation, participants are need to decide an appropriate summary length for each individual article</b></li>
+                            <li>the submission should be in CSV format.</li>
+                            <li>The submission file should contain two columns.
                                 <ul class="ml-4">
-                                    <li>id : the id of the given tweets</li>
-                                    <li>label: the label you have predicted for a given id</li>
-                                    <li><b>Note</b>: that the column names are case sensitive</li>
+                                    <li>id: id of the tweet.</li>
+                                    <li>summary: the summary you have predicted for given id.</li>
+                                    <li><strong>Note: </strong>column names case sensitive.</li>
                                 </ul>
                             </li>
-                            <li>All the ids should be included in the submission.</li>
-                            <li>There should be no missing labels in the label column.</li>
-                            <li>The submission name for 2 different submissions for same subtask must not be the same</li>
-                            <li>Check the <a href="sample_submission.csv">sample submission file </a>before making a submission.</li>
+                            <li>All ids must be included in submission.</li>
+                            <li>There should be no missing summary in summary column.</li>
+                            <li>Give your run/submission a unique name in limit of 40 characters. This name will not be displayed on leaderboard</li>
+                            <li>Write a small description of techniques, algorithm and hyper-parameters you used in your model within a limit of 256 characters. Note that this field is optional.</li>
+                            <li>The submission name for 2 different submissions for same subtask must not be the same.</li>
+                            <li>please take a look at attached <a href="https://ilsum.github.io/submission/sample_submission.csv">sample submission file</a> before making a submission.</li>
                         </ul>
                     </div>
                 </div>
