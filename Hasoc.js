@@ -1,5 +1,5 @@
-//proxy = `http://127.0.0.1:5000/`
-proxy = `https://ilsumsub.el.r.appspot.com`
+proxy = `http://127.0.0.1:5000/`
+    //proxy = `https://ilsumsub.el.r.appspot.com`
 
 var task_titles = {
     "English": "English",
@@ -127,6 +127,11 @@ async function submission() {
                                 if (error == 'Error: 409') {
                                     Swal.showValidationMessage(
                                         `Can't Use Same Submission Name For Multiple Submissions`
+                                    )
+                                }
+                                if (error == 'Error: 500') {
+                                    Swal.showValidationMessage(
+                                        `Internal Server Error`
                                     )
                                 }
                             })
